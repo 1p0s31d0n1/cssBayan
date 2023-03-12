@@ -1,0 +1,132 @@
+@media screen and (max-width: 820px) {
+    .container {
+        width: 100%;
+    }
+    .meme img {
+        width: 100%;
+    }
+    .headerMeme {
+        font-size: large;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1280px) {
+    .container {
+        width: 75%;
+    }
+    .meme img {
+        width: 75%;
+    }
+    .headerMeme {
+        font-size: larger;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        width: 50%;
+    }
+    .icon {
+        display: none;
+    }
+    .meme img {
+        width: 50%;
+    }
+    .headerMeme {
+        font-size:  medium;
+    }
+}
+
+@media (hover:hover) {
+    .accordion {
+        color: blue;
+    }
+    .accordion:hover {
+        color: black;
+    }
+    .container:hover .icon {
+        display: flex;
+    }
+    label:hover {
+        cursor: pointer;
+    }
+    label:hover .meme {
+        transition: 1s;
+        opacity: 1;
+        visibility: visible;
+        height: max-content;
+    }
+    label:active .icon {
+        rotate: 0deg;
+        stroke: blue;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: antiquewhite;
+}
+
+.headerMeme {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    border-top: 1px solid grey;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.memeBlock {
+    display: flex;
+    background-color: lightgray;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input:checked + label {
+    color:black;
+}
+
+.meme {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: 1s;
+}
+
+input:active + label {
+    opacity: 0.7;
+}
+
+input:active + label .headerMeme {
+    color:blue;
+}
+
+input:checked + label .meme {
+    transition: 1s;
+    opacity: 1;
+    visibility: visible;
+    height: max-content;
+}
+
+input:checked + label .icon {
+    rotate: 0deg;
+}
+
+label .icon  {
+    rotate: 135deg;
+    transition: 1s;
+}
+
+.icon {
+    width: 1.25em;
+}
+
