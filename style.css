@@ -26,6 +26,21 @@
     .container {
         width: 50%;
     }
+    .accordion {
+        color: blue;
+    }
+    .accordion:hover {
+        color: black;
+    }
+    input:checked + label {
+        color:black;
+    }
+    .icon {
+        display: none;
+    }
+    .container:hover .icon {
+        display: flex;
+    }
     .meme img {
         width: 50%;
     }
@@ -49,6 +64,7 @@
 body {
     display: flex;
     justify-content: center;
+    background: antiquewhite;
 }
 
 .headerMeme {
@@ -96,7 +112,11 @@ input:checked + label .meme {
     height: max-content;
 }
 
+input:checked + label .icon {
+    rotate: 0deg;
+}
+
 label .icon  {
-    rotate: 225deg;
+    rotate: 135deg;
     transition: 1s;
 }
