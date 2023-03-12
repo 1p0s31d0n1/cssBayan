@@ -26,23 +26,26 @@
     .container {
         width: 50%;
     }
+    .icon {
+        display: none;
+    }
+    .meme img {
+        width: 50%;
+    }
+    .headerMeme {
+        font-size:  medium;
+    }
+}
+
+@media (hover:hover) {
     .accordion {
         color: blue;
     }
     .accordion:hover {
         color: black;
     }
-    input:checked + label {
-        color:black;
-    }
-    .icon {
-        display: none;
-    }
     .container:hover .icon {
         display: flex;
-    }
-    .meme img {
-        width: 50%;
     }
     label:hover {
         cursor: pointer;
@@ -55,9 +58,6 @@
     }
     label:hover .icon {
         rotate: 0deg;
-    }
-    .headerMeme {
-        font-size:  medium;
     }
 }
 
@@ -86,6 +86,10 @@ body {
 
 input[type="radio"] {
     display: none;
+}
+
+input:checked + label {
+    color:black;
 }
 
 .meme {
